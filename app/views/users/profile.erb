@@ -1,7 +1,10 @@
 <div class="container">
-  <h1>Hey there, <%=@user.username %>! Here are your stats:</h1>
+  <h1>Hey there, <%=@user.username %>!</h1><br>
+  <br>
   <button><a href="/decks">Pick A Deck</a></button>
-
   <button><a href="/logout">logout</a></button>
-
+  <h2>Your stats:</h2>
+  <% @rounds.each do |round| %>
+  	<p><%= round.name %>: <%= round.number_correct %> correct out of <%= round.deck.cards.count %></p><br>
+  <% end %>
 </div>

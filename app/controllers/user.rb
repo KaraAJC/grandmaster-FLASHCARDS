@@ -32,6 +32,7 @@ end
 
 get '/profile' do #show user profile
   @user = User.find(session[:user_id])
+  @rounds = @user.rounds
   erb :'users/profile'
 end
 
