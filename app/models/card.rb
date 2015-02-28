@@ -6,7 +6,11 @@ class Card < ActiveRecord::Base
   validates :deck_id, presence: true
 
   def check(response)
-    Return true if response == self.answer
+    if response == self.answer
+      return "CORRECT!"
+    else
+      return "WROONG!"
+    end
   end
 
 end
