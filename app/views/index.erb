@@ -1,11 +1,16 @@
-<div class="container">
+<div>
   <h1>GRANDMASTER FLASHCARDS!</h1>
-  <hr>
+</div>
+
+  <% if @errors %>
+    <%= @errors %>
+  <% end %>
+
+<div class="signup">
   <form action="/login" method="POST">
     <input class="login" id="username" type="text" name="username" placeholder="Enter Username"/>
     <input class="login" id="password" type="password" name="password" placeholder="Enter Password"/>
     <input type="submit" value="login">
+    <a href="/signup">signup</a>
   </form>
-  <br/>
-  <a href="/signup">signup</a>
 </div>

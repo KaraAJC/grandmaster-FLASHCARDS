@@ -4,9 +4,14 @@ end
 
 
 post '/login' do #find user, start session
-  @user = User.find_by(username: params[:username], password: params[:password])
-  session[:user_id] = @user.id
-  redirect '/profile'
+  @user = User.authenticate(params[:username], params[:password])
+  if @user
+    session[:user_id] = @user.id
+    redirect '/profile'
+  else
+    @errors = "Username and/or password not valid. Try again."
+    erb :index
+  end
 end
 
 get '/signup' do #set user form
