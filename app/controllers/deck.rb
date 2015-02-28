@@ -28,3 +28,10 @@ end
 
 #   erb: "card/answer"
 # end
+
+
+get '/decks/:deck_id/results' do
+  @deck = Deck.find(params[:deck_id])
+  @round = session[:round_id]
+  erb :"deck/results"
+end
