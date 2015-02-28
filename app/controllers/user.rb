@@ -14,7 +14,15 @@ get '/signup' do #set user form
 end
 
 post '/signup' do # create user
+  @user = User.create(username: params[:username], password: params[:password])
 
+  if @user.valid?
+    session[:user_id] = @user.id
+    redirect '/profile'
+  else
+    @errors = @user.errors
+    erb :'users/new'
+  end
 end
 
 get '/profile' do #show user profile
