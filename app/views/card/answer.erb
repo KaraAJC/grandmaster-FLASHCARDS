@@ -1,0 +1,11 @@
+<h1>Your guess, <%= @guess %> was </h1>
+<% if @choice == "CORRECT!" %>
+  <h1> CORRECT!!!</h1>
+  <h3 class="right_answer"> YOU ARE AWESOME!!</h3>
+<% else %>
+  <h1> WROOOONNG...</h1>
+  <h3 class="wrong_answer"> AWWW SUCKA, YOU ARE NOT AWESOME. </h3>
+<% end %>
+
+<a href="/decks/<%= @deck.id %>/cards/<%= @card.id + 1%>">next card</a>
+
