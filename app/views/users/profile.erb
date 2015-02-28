@@ -5,6 +5,6 @@
   <button><a href="/logout">logout</a></button>
   <h2>Your stats:</h2>
   <% @rounds.each do |round| %>
-  	<p><%= round.name %>: <%= round.number_correct %> correct out of <%= round.deck.cards.count %></p><br>
+  	<p><%= round.deck.name %>: <%= round.number_correct %> correct out of <%= round.deck.cards.count %></p><br>
   <% end %>
 </div>
