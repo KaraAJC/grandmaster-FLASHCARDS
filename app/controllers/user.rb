@@ -10,7 +10,7 @@ post '/login' do #find user, start session
 end
 
 get '/signup' do #set user form
-
+  erb :'users/new'
 end
 
 post '/signup' do # create user
@@ -19,7 +19,7 @@ end
 
 get '/profile' do #show user profile
   @user = User.find(session[:user_id])
-  erb :profile
+  erb :'users/profile'
 end
 
 get '/logout' do
