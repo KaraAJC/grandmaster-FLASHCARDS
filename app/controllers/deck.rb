@@ -12,7 +12,7 @@ get '/decks/:deck_id' do
   puts params
   @deck = Deck.find(params[:deck_id])
   @user = User.find(session[:user_id])
-  @round = Round.create( deck_id: @deck.id, player_id: @user.id )
+  @round = Round.create( deck_id: @deck.id, user_id: @user.id )
   session[:round_id] = @round.id
   redirect "/decks/#{@deck.id}/cards/#{@deck.cards.first.id}"
 end
@@ -31,8 +31,12 @@ get '/decks/:deck_id/cards/:card_id/guess' do
   @deck = Deck.find(params[:deck_id])
   @card = Card.find(params[:card_id])
   @guess = params[:guess]
+  @round = Round.find(session[:round_id])
   @choice = @card.check(@guess)
-  @round = Round.find(session[round_id])
+  @done = @deck.cards.last.id
+  if @choice == "CORRECT!"
+    @round.update_correct
+  end
 
   erb :"card/answer"
 end

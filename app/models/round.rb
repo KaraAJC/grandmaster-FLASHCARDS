@@ -3,7 +3,8 @@ class Round < ActiveRecord::Base
   belongs_to :deck
 
   def update_correct
-    self.correct += 1
+    self.number_correct += 1
+    self.save
   end
 
 end

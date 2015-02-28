@@ -7,5 +7,8 @@
   <h3 class="wrong_answer"> AWWW SUCKA, YOU ARE NOT AWESOME. </h3>
 <% end %>
 
-<a href="/decks/<%= @deck.id %>/cards/<%= @card.id + 1%>">next card</a>
-
+<% if @card.id == @done %>
+  <a href="/decks/results"> SEE RESULTS!</a>
+<% else %>
+  <a href="/decks/<%= @deck.id %>/cards/<%=@card.id + 1%>">next card</a>
+<% end %>
