@@ -47,4 +47,3 @@ end
   # @choice = @card.check(@guess)
 
   # erb :"card/answer"
-
