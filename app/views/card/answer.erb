@@ -1,15 +1,15 @@
-<h1>Your guess, <%= @guess %> was </h1>
+<h2>Your guess, <%= @guess %>, was </h2>
 <% if @choice == "CORRECT!" %>
   <h1> CORRECT!!!</h1>
-  <h3 class="right_answer"> YOU ARE AWESOME!!</h3>
+  <h3> YOU ARE AWESOME!!</h3>
 <% else %>
   <h1> WROOOONNG...</h1>
-  <h3 class="wrong_answer"> AWWW SUCKA, YOU ARE NOT AWESOME. </h3>
-  <h5> PS.. the answer was <%= @card.answer %>
+  <h3> AWWW SUCKA, YOU ARE NOT AWESOME. </h3>
+  <h4> P.S. the answer was <%= @card.answer %></h4>
 <% end %>
 
 <% if @card.id == @done %>
-  <a href="/decks/<%= @deck.id %>/results"> SEE RESULTS!</a>
+  <button><a href="/decks/<%= @deck.id %>/results"> SEE RESULTS!</a></button>
 <% else %>
-  <a href="/decks/<%= @deck.id %>/cards/<%=@card.id + 1%>">next card</a>
+  <button><a href="/decks/<%= @deck.id %>/cards/<%=@card.id + 1%>">Next Card</a></button>
 <% end %>

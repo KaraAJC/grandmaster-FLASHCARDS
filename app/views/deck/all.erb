@@ -1,5 +1,4 @@
-<h1>Here are Your Decks!</h1>
-
+<button><a href="/profile">Return to my profile</a></button><h1>Here are Your Decks!</h1>
 <%@decks.each do |deck| %>
-   <p><a href='/decks/<%= deck.id %>'> <%= deck.name %></a></p>
+   <div class="tape"><p><a href='/decks/<%= deck.id %>'> <%= deck.name %></a></p></div>
 <%end%>

@@ -1,12 +1,7 @@
-<h1>HELLO AND WELCOME TO YOUR CARD!</h1>
-<h2>YOU ARE LOOKING AT A DECK CALLED:</h2>
 <%= @deck.name %><br>
-<!-- <h3>Card #<%= @card.id %></h3> -->
-<h4>QUESTION!!!!!</h4>
+<h1>Card #<%= @card.id %></h1>
 <p><%= @card.question %></p>
-
-<h4>WHAT IS YOUR ANSWER?!?!?!</h4>
 <form action="/decks/<%= @deck.id%>/cards/<%= @card.id%>/guess" method='GET'>
-  <input type="text" name="guess" placeholder="enter your guess here!"/>
-  <input type="submit" value="GUESSSSSSS MUTHA!"/>
+  <input type="text" name="guess" placeholder="Your guess">
+  <input type="submit" value="GUESS!">
 </form>
