@@ -1,6 +1,10 @@
-<button><a href="/decks">Pick A Deck</a></button>
-<h1>Hey there, <%=@user.username %>!</h1>
-<h2>Your Stats:</h2>
-<% @rounds.each do |round| %>
-	<p><%= round.deck.name %>: <%= round.number_correct %> correct out of <%= round.deck.cards.count %></p>
-<% end %>
+<div class="main_content">
+	<h2 class="top_box">Hey there, <%=@user.username %>!</h2>
+	<button><a href="/decks">Pick A Deck</a></button>
+	<div class="bottom_box">
+		<h3>Your Stats:</h3>
+		<% @rounds.each do |round| %>
+			<p><%= round.deck.name %>: <%= round.number_correct %> correct out of <%= round.deck.cards.count %></p>
+		<% end %>
+	</div>
+</div>

@@ -1,4 +1,9 @@
-<button><a href="/profile">Return to my profile</a></button><h1>Here are Your Decks!</h1>
-<%@decks.each do |deck| %>
-   <div class="tape"><p><a href='/decks/<%= deck.id %>'> <%= deck.name %></a></p></div>
-<%end%>
+<button id="return_to_profile"><a href="/profile">Return to my profile</a></button>
+<div class="main_content">
+	<h1 class="top_box">Here Are Your Decks!</h1>
+	<div class="bottom_box">
+		<%@decks.each do |deck| %>
+	   <p><a class="deck_link" href='/decks/<%= deck.id %>'> <%= deck.name %></a></p>
+		<%end%>
+	</div>
+</div>

@@ -1,15 +1,19 @@
-<h2>Your guess, <%= @guess %>, was </h2>
-<% if @choice == "CORRECT!" %>
-  <h1> CORRECT!!!</h1>
-  <h3> YOU ARE AWESOME!!</h3>
-<% else %>
-  <h1> WROOOONNG...</h1>
-  <h3> AWWW SUCKA, YOU ARE NOT AWESOME. </h3>
-  <h4> P.S. the answer was <%= @card.answer %></h4>
-<% end %>
+<div class="main_content">
+	<div class="top_box">
+	<h2>Your guess, <%= @guess %>, was </h2>
+	<% if @choice == "CORRECT!" %>
+	  <h1> CORRECT!!!</h1>
+	  <h3> YOU ARE AWESOME!!</h3>
+	<% else %>
+	  <h1> WROOOONNG...</h1>
+	  <h3> AWWW SUCKA, YOU ARE NOT AWESOME. </h3>
+	  <h4> P.S. the answer was <%= @card.answer %></h4>
+	<% end %>
 
-<% if @card.id == @done %>
-  <button><a href="/decks/<%= @deck.id %>/results"> SEE RESULTS!</a></button>
-<% else %>
-  <button><a href="/decks/<%= @deck.id %>/cards/<%=@card.id + 1%>">Next Card</a></button>
-<% end %>
+	<% if @card.id == @done %>
+	  <button><a href="/decks/<%= @deck.id %>/results"> SEE RESULTS!</a></button>
+	<% else %>
+	  <button><a href="/decks/<%= @deck.id %>/cards/<%=@card.id + 1%>">Next Card</a></button>
+	<% end %>
+</div>
+</div>

@@ -1,12 +1,17 @@
-<h1>GRANDMASTER FLASHCARDS</h1>
+<h1 id="main_title">GRANDMASTER FLASHCARDS</h1>
 
 <% if @errors %>
   <%= @errors %>
 <% end %>
 
-<form action="/login" method="POST">
-  <input class="login" id="username" type="text" name="username" placeholder="Enter Username"/>
-  <input class="login" id="password" type="password" name="password" placeholder="Enter Password"/>
-  <input type="submit" value="Login">
-</form>
-<a href="/signup">Signup</a>
+<div id="signin">
+<img id="boombox" src="/imgs/boombox.png">
+	<div id="signin_form">
+		<form action="/login" method="POST">
+		  <input class="login" id="username" type="text" name="username" placeholder="Enter Username"/>
+		  <input class="login" id="password" type="password" name="password" placeholder="Enter Password"/>
+		  <input class="submit_form" type="submit" value="Login">
+			<button><a href="/signup">Signup</a></button>
+		</form>
+	</div>
+</div>

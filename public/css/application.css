@@ -1,44 +1,138 @@
-/*.container{
-    padding-top: 10em;
-    width:100%;
-
-    /* Firefox */
-    display:-moz-box;
-    -moz-box-pack:center;
-    -moz-box-align:center;
-
-     Safari and Chrome
-    display:-webkit-box;
-    -webkit-box-pack:center;
-    -webkit-box-align:center;
-
-    /* W3C */
-    display:box;
-    box-pack:center;
-    box-align:center;
-
-}*/
-
-h1 {
-  padding-top: 10em;
-  width:100%;
-
-  /* Firefox */
-  display:-moz-box;
-  -moz-box-pack:center;
-  -moz-box-align:center;
-
-  /* Safari and Chrome */
-  display:-webkit-box;
-  -webkit-box-pack:center;
-  -webkit-box-align:center;
-
-  /* W3C */
-  display:box;
-  box-pack:center;
-  box-align:center;
+/*GENERAL USE*/
+body {
+  background-image: url("/imgs/wall2.jpg");
+  min-width: 1200px;
 }
 
-.signup {
+.title {
+  font-family: Juice;
+  font-size: 3.5em;
+  color: #000000;
+  text-shadow: 0.2em 0.5em 0.1em #FB07EC,
+      -0.3em 0.1em 0.1em #E2B200,
+      0.4em -0.3em 0.1em #6BF109,
+      0.6em 0.3em 0.1em #4BFEFF;
   text-align: center;
+}
+
+#logout {
+ position: absolute;
+ top: 1em;
+ right: 1em;
+}
+
+.main_content {
+  margin-top: 1em;
+  width: 30%;
+  margin-left: auto;
+  margin-right: auto;
+  text-align: center;
+}
+
+.top_box {
+  background-color: #6BF109;
+  border: 3px black solid;
+  padding: 1em;
+  border-radius: 2em;
+}
+
+.bottom_box {
+  background-color: #FB07EC;
+  border: 3px black solid;
+  padding: 1em;
+  margin-top: 1em;
+  border-radius: 2em;
+
+}
+
+
+/* STYLING FOR FORMS */
+
+input {
+  margin-bottom: 1em;
+  border: 2px solid black;
+}
+
+.submit_form {
+  border-radius: 1em;
+}
+
+.submit_form:hover {
+  background-color: #4BFEFF;
+}
+
+button {
+  border: 2px solid black;
+  color: black;
+  border-radius: 1em;
+}
+
+button:hover {
+  background-color: #4BFEFF;
+}
+
+a {
+  color:black;
+  text-decoration: none;
+}
+
+/*FONTS USED*/
+@font-face {
+  font-family: FreshTrack;
+  src: url("/fonts/FreshTrack.ttf");
+}
+
+@font-face {
+  font-family: Juice; 
+  src: url("/fonts/JUICE.TTF");
+}
+
+@font-face {
+  font-family: Ruthless;
+  src: url("/fonts/Ruthless.ttf");
+}
+
+/*USED ON INDEX PAGE*/
+#main_title {
+  font-family: FreshTrack;
+  font-size: 6.5em;
+  color: #000000;
+  text-shadow: 0.2em 0.5em 0.1em #FB07EC,
+      -0.3em 0.1em 0.1em #E2B200,
+      0.4em -0.3em 0.1em #6BF109,
+      0.6em 0.3em 0.1em #4BFEFF;
+  text-align: center;
+}
+
+#boombox {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;   
+}
+
+#signin {
+  width: 50%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#signin_form {
+  position: relative;
+  top: -225px;
+  width: 20%;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/*USED ON DECK LIST PAGE*/
+
+.deck_link:hover {
+  font-size: 1.5em;
+  font-weight: bold;
+}
+
+#return_to_profile {
+ position: absolute;
+ top: 1em;
+ left: 1em;
 }
