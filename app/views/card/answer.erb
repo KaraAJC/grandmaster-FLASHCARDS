@@ -5,10 +5,11 @@
 <% else %>
   <h1> WROOOONNG...</h1>
   <h3 class="wrong_answer"> AWWW SUCKA, YOU ARE NOT AWESOME. </h3>
+  <h5> PS.. the answer was <%= @card.answer %>
 <% end %>
 
 <% if @card.id == @done %>
-  <a href="/decks/results"> SEE RESULTS!</a>
+  <a href="/decks/<%= @deck.id %>/results"> SEE RESULTS!</a>
 <% else %>
   <a href="/decks/<%= @deck.id %>/cards/<%=@card.id + 1%>">next card</a>
 <% end %>
