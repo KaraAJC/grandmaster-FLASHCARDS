@@ -41,6 +41,13 @@ get '/decks/:deck_id/cards/:card_id/guess' do
   erb :"card/answer"
 end
 
+get '/decks/:deck_id/results' do
+  @deck = Deck.find(params[:deck_id])
+  @round = Round.find(session[:round_id])
+  session[:round_id] = nil
+  erb :'deck/results'
+end
+
 # get '/decks/:deck_id/cards/:card_id/guess' do
 #   puts "GET request is made "
 #   puts params
