@@ -1,4 +1,4 @@
-<h1>SIGNUP!</h1>
+<h1 class="title">SIGNUP!</h1>
   <% if @errors %>
     <% @errors.full_messages.each do |error| %>
       <%= error %>
@@ -8,6 +8,6 @@
 <form action="/signup" method="POST">
   <input class="login" id="username" type="text" name="username" placeholder="Username"/>
   <input class="login" id="password" type="password" name="password" placeholder="Password"/>
-  <input type="submit" value="Signup">
+  <input class="submit_form" type="submit" value="Signup">
 </form>
 <br>

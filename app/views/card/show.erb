@@ -1,7 +1,13 @@
-<%= @deck.name %><br>
-<h1>Card #<%= @card.id %></h1>
-<p><%= @card.question %></p>
-<form action="/decks/<%= @deck.id%>/cards/<%= @card.id%>/guess" method='GET'>
-  <input type="text" name="guess" placeholder="Your guess">
-  <input type="submit" value="GUESS!">
-</form>
+<div class="main_content">
+	<div class="top_box">
+		<%= @deck.name %><br>
+		<h3>Card #<%= @card.id %></h3>
+	</div>
+	<div class="bottom_box">
+		<p><%= @card.question %></p>
+		<form action="/decks/<%= @deck.id%>/cards/<%= @card.id%>/guess" method='GET'>
+		  <input type="text" name="guess" placeholder="Your guess">
+		  <input class="submit_form" type="submit" value="GUESS!">
+		</form>
+	</div>
+</div>

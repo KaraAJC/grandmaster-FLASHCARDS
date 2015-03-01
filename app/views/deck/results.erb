@@ -1,5 +1,11 @@
-<h1>Your results for:</h1>
-<h2><%= @deck.name %></h2>
-<h3>You got <%= @round.number_correct %> correct out of <%= @deck.cards.count%></h3>
-<button><a href="/profile">Return to My Profile</a></button><br>
-<button><a href="/decks">Play Another Deck</a></button>
+<div class="main_content">
+	<div class="top_box">
+		<h2>Your results for:</h2>
+		<h2><%= @deck.name %></h2>
+	</div>
+	<div class="bottom_box">
+		<h3>You got <%= @round.number_correct %> correct out of <%= @deck.cards.count%></h3>
+	</div>
+	<button><a href="/profile">Return to My Profile</a></button><br>
+	<button><a href="/decks">Play Another Deck</a></button>
+</div>
